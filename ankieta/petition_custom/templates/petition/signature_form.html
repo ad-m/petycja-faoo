@@ -1,0 +1,25 @@
+{% extends 'petition/base.html' %}
+{% load crispy_forms_tags webdesign %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <div class="card card-dark">
+            {{petition.text_top | safe}}
+        </div>
+        <div class="card card-light">
+            {{petition.text_bottom | safe}}
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="card card-brand">
+            <h2>{{petition.title}}</h2>
+            {{petition.text | safe}}
+            <h3 class="text-center">Twoje dane</h3>
+            <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
+            {% crispy form %}
+        </div>
+    </div>
+</div>
+{% endblock %}
