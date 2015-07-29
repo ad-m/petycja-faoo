@@ -1,74 +1,95 @@
-$brand-primary: #2883AF;
-// $brand-primary: #686301;
-$brand-gray: #4D4D4D;
-$body-bg: #F7F7F7;
-
+@import "bootstrap_variables";
 @import "bootstrap";
 @import "font-awesome";
-@import "card";
-@import "footer";
+// @import "card";
+// @import "footer";
 
-.container-page{
-	background: white;
+.body{
+	background-color: white;
+	// #E7E7E7
+	background-image: linear-gradient(to bottom, transparent, #E7E7E7 100px), url('http://www.faoo.pl/img/body.top.jpg');
+	background-position: center bottom, center top;
+	background-size: 100% 100px, auto auto ;
+	background-repeat: no-repeat;
+	min-height: 600px;
 }
-.container-page{
-	padding: 0;
-}
-.container-page{
-	@media (min-width:992px){
-		width: 1400px;
-		max-width: 95%
+.header{
+	margin: 15px 0;
+	&-title{
+		color: #D50E3C;
+		text-decoration: none;
+		font-size: 20px;
+		&:focus, &:hover{
+			color: #D50E3C;
+			text-decoration: none;
+		}
 	}
 }
-.logo{
-	padding: 1em;
-}
-.menu-main{
-	background:  $brand-gray;
-	>ul{
-		display: block;
+.main-menu{
+	line-height: 70px;
+	font-family: Liberation Sans, sans-serif;
+	font-size: 24px;
+	ul{
 		list-style: none;
-		padding: 0;
-		margin: 0;
-		>li{
+		// padding: 0 15px ;
+		padding: 0 40px;
+		border: 1px solid #E1E1E1;
+		border-radius: 15px;
+		background: white;
+		@include clearfix;
+		li{
 			display: block;
-			font-size: 1.5em;
-			line-height: 4em;
-			>a{ 
-				padding: 0 2em;
-				color: white;
-				text-transform: uppercase;
-				cursor: pointer;
-				display: block;
-				vertical-align: middle;
-				&:hover, &:active{
-					background: $brand-primary;
-					text-decoration: none;					
-				}
+			border-bottom: 1px solid #E1E1E1;
+			@media(min-width: $screen-sm-min){
+				display: inline-block;
+				border-right: 1px solid #E1E1E1;
+				float: left;
+				border-bottom: none;
+			}
+			&:last-child{
+				border-bottom: none;
+			}
+			a{
+				color: #5D5C5C;
+				text-decoration: none;
+				padding: 0 15px;
 				.fa{
+					color: #A8A8A8;
 					vertical-align: middle;
 				}
 			}
-		}
-		@media (min-width:992px){
-			display: flex;
-			justify-content:  center;
-			.item-petition{
-				order: 1;
-			}
-			.item-home{
-				order: 2;
-			}
-			.item-petition{
-				order: 3;
+			&.item-home .fa{
+				font-size: 36px;
 			}
 		}
 	}
-	// @media (min-width:1200px){
-	// 	float: right;
-	// }
+}
+.content{
+	padding: 15px;
 }
 
-
-
-
+.footer{
+	background: white;
+	padding: 15px 0;
+	border-top: 2px solid #EB6B14
+}
+.widget{
+	padding: 20px;
+	background: white;
+	border: 1px solid #E1E1E1;
+	margin-bottom: 15px;
+	margin: 15px;
+	border-radius: 15px;
+	color: #6C6B6B;
+	h1, .widget-title{
+		font-size: 15px;
+		border-bottom: 2px solid #DC3330;
+		line-height: 30px;
+		color: #F39200;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+}
+.text-counter{
+	font-size: 36px;
+}

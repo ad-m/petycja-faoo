@@ -13,45 +13,40 @@
     {% block css %}
         <link rel="stylesheet" href="{% static 'css/style.css'%}">
     {% endblock %}
-    
+
     <title>{{config.PAGE_NAME}}</title>
 
 </head>
 
 <body>
-    <div class="container container-page">
-        <div class="header row">
-            <!--
-            <div class="col-sm-12 col-lg-4 ">
-                <a href="http://siecobywatelska.pl">
-                    <img class="logo" src="{% static 'img/watchdog.png'%}" alt="Logo Watchdog">
-                </a>
-            </div>-->
-            <div class="col-xs-12 ">
-                <div class="menu-main">
-                    <ul>
-                        <li class="item-home"><a href="/"><i class="fa fa-2x fa-home"></i> <span class="visible-xs-inline visible-sm-inline">Główna</span></a></li>
-                        <li class="item-petition"><a href="{% url 'petition:list'%}">Podpisali się</a></li>
-                        <li class="item-contact"><a href="{% url 'contact:form' %}">Kontakt</a></li>
-                        <!-- <li class="item-media"><a href="{% url 'media' %}">Dla mediów</a></li> -->
-                    </ul>
+    <div class="body">
+        <div class="container">
+            <div class="header">
+                <div class="row">
+                    <div class="col-md-6 col-md-push-2"><a href="http://www.faoo.pl/"><img src="http://www.faoo.pl/img/logo.png" alt=""></a></div>
+                    <div class="col-md-4 col-md-push-1"><a href="/" class="header-title">{{config.PAGE_NAME}}</a></div>
+                </div>
+            </div>
+            <div class="main-menu">
+                <ul>
+                    <li class="item-home"><a href="/"><i class="fa fa-home"></i> <span class="visible-xs-inline visible-sm-inline">Strona główna</span></a></li>
+                    <li class="item-petition"><a href="{% url 'petition:list'%}">Podpisali się</a></li>
+                    <li class="item-contact"><a href="{% url 'contact:form' %}">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="row">
+                    {% block content %}
+                    <p>Use this document as a way to quick start any new project.</p>
+                    {% endblock content %}
                 </div>
             </div>
         </div>
-        <div class="row">
-            <main class="col-sm-12 col-md-10 col-md-offset-1">
-                <h1>{{config.PAGE_NAME}}</h1>
+    </div>
+    {% include '_footer.html' %}
 
-                {% block content %}
-                <p>Use this document as a way to quick start any new project.</p>
-                {% endblock content %}
-            </main>
-
-        </div>
-
-        {% include '_footer.html' %}
     {% block javascript %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 </body>
 </html>
