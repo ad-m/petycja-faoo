@@ -47,6 +47,8 @@ class Common(Configuration):
         # 'allauth',  # registration
         # 'allauth.account',  # registration
         # 'allauth.socialaccount',  # registration
+        'tinymce',
+        'flatpages_tinymce',
         'tinycontent'
     )
 
@@ -333,3 +335,7 @@ class Common(Configuration):
     CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
     CONSTANCE_DATABASE_CACHE_BACKEND = 'default'
     PETITION_PETITION_MODEL = 'petition_custom.Petition'
+
+    TINYMCE_DEFAULT_CONFIG = {
+        'theme': "advanced",
+    }
