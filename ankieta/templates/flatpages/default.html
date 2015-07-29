@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load flatpage_admin %}
 <div class="row">
 	<div class="col-sm-12">
 		<div class="widget">
 			<h1 class="widget-title">{{ flatpage.title }}</h1>
-			{{flatpage.content}}
+			{% flatpage_admin content %}
 		</div>
 	</div>
 </div>

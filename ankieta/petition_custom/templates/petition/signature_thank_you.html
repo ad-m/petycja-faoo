@@ -1,4 +1,8 @@
 {% extends 'petition/base.html' %}
 {% block content %}
-{{config.LETTER_THANK_YOU | safe}}
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        {{object.thank_you | safe}}
+    </div>
+</div>
 {% endblock %}
