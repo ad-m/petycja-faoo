@@ -38,7 +38,7 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-8">
         <div class="widget">
             <div class="widget-title">
                 Lista podpisów
@@ -68,21 +68,26 @@
                 </tbody>
             </table>
             {% if page_obj.has_previous or page_obj.has_next %}
-            <div class="pager">
+
+            <ul class="pager">
                 {% if page_obj.has_previous %}
-                <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page.previous_page_number}}">«</a>
+                <li class="previous">
+                    <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page.previous_page_number}}"><span aria-hidden="true">&larr;</span> Poprzednie</a></a>
+                </li>
                 {% endif %}
-                {{page_obj.number}} z {{page_obj.paginator.num_pages}}
+                <li>{{page_obj.number}} z {{page_obj.paginator.num_pages}}</li>
                 {% if page_obj.has_next %}
-                <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page_obj.next_page_number}}">»</a>
+                <li class="next">
+                    <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page_obj.next_page_number}}">Kolejne <span aria-hidden="true">&rarr;</span></a>
+                </li>
                 {% endif %}
-            </div>
+            </ul>
             {% endif %}
         </div>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-4">
         <div class="widget">
-            <div class="text-center">{{count}}</div>
+            <div class="text-center counter-number">{{count}}</div>
             <div class="text-center">podpisów</div>
         </div>
         <div class="widget">

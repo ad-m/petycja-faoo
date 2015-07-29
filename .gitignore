@@ -29,3 +29,5 @@ node_modules/
 
 # Compass
 .sass-cache
+
+bower_components/

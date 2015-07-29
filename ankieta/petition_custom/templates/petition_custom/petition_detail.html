@@ -1,22 +1,20 @@
 {% extends 'petition/base.html' %}
 {% block content %}
 <div class="row">
-    <div class="col-sm-12 col-md-6">
-        <div class="card card-dark">
+    <div class="col-sm-12 col-md-8">
+        <div class="widget">
             {{object.text_top | safe}}
         </div>
-        <div class="card card-light">
+        <div class="widget">
             {{object.text_bottom | safe}}
         </div>
     </div>
-    <div class="col-sm-12 col-md-6">
-        <div class="card card-brand">
-            <h1 class="text-center">{{object.signature_count}}</h1>
-            <h2 class="text-center">podpisów</h2>
+    <div class="col-sm-12 col-md-4">
+        <div class="widget">
+            <div class="text-center counter-number">{{object.signature_count}}</div>
+            <div class="text-center counter-desc">podpisów</div>
         </div>
-    </div>
-    <div class="col-sm-12 col-md-6">
-        <div class="card card-brand">
+        <div class="widget">
             {{object.text | safe}}
         </div>
     </div>

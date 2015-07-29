@@ -4,16 +4,20 @@
 {% block content %}
 <div class="row">
     <div class="col-sm-12 col-md-6">
-        {% if config.CONTACT_BLOCK_1 %}
-        {{ config.CONTACT_BLOCK | safe}}
-        {% endif %}
+        <div class="widget">
+            {% if config.CONTACT_BLOCK_1 %}
+            {{ config.CONTACT_BLOCK | safe}}
+            {% endif %}
+        </div>
     </div>
     <div class="col-sm-12 col-md-6">
-        <h1>Skontaktuj się z nami</h1>
-        {% block form %}
-        <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
-        {% crispy form %}
-        {% endblock %}
+        <div class="widget">
+            <h1 clas="widget-title">Skontaktuj się z nami</h1>
+            {% block form %}
+            <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
+            {% crispy form %}
+            {% endblock %}
+        </div>
     </div>
 </div>
 {% endblock %}

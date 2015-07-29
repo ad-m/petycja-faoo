@@ -5,16 +5,16 @@
 
 <div class="row">
     <div class="col-sm-12 col-md-6">
-        <div class="card card-dark">
+        <div class="widget">
             {{petition.text_top | safe}}
         </div>
-        <div class="card card-light">
+        <div class="widget">
             {{petition.text_bottom | safe}}
         </div>
     </div>
     <div class="col-sm-12 col-md-6">
-        <div class="card card-brand">
-            <h2>{{petition.title}}</h2>
+        <div class="widget">
+            <h2 class="widget-title">{{petition.title}}</h2>
             {{petition.text | safe}}
             <h3 class="text-center">Twoje dane</h3>
             <div id="reqNote">Pola oznaczone gwiazdką (*) są wymagane</div>
