@@ -47,6 +47,7 @@ class Common(Configuration):
         # 'allauth',  # registration
         # 'allauth.account',  # registration
         # 'allauth.socialaccount',  # registration
+        'tinycontent'
     )
 
     # Apps specific for this project go here.
