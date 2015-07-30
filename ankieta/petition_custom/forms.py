@@ -1,6 +1,9 @@
 from petition.forms import BaseSignatureForm
 from crispy_forms.layout import Layout
 from crispy_forms.bootstrap import PrependedText
+import swapper
+
+Signature = swapper.load_model("petition", "Signature")
 
 
 class SignatureForm(BaseSignatureForm):
@@ -15,3 +18,6 @@ class SignatureForm(BaseSignatureForm):
                 'giodo',
                 'newsletter',
         )
+
+    class Meta:
+        model = Signature
