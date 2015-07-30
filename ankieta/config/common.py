@@ -313,3 +313,4 @@ class Common(Configuration):
     TINYMCE_DEFAULT_CONFIG = {
         'theme': "advanced",
     }
+    PETITION_SIGNATURE_FORM = 'petition_custom.forms.SignatureForm'
