@@ -37,7 +37,7 @@
             <ul class="pager">
                 {% if page_obj.has_previous %}
                 <li class="previous">
-                    <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page.previous_page_number}}"><span aria-hidden="true">&larr;</span> Poprzednie</a></a>
+                    <a href="?order_by={{order_by}}&ordering={{ordering}}&page={{page.previous_page_number}}"><span aria-hidden="true">&larr;</span> Poprzednie</a>
                 </li>
                 {% endif %}
                 <li>{{page_obj.number}} z {{page_obj.paginator.num_pages}}</li>
