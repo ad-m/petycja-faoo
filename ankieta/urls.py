@@ -27,7 +27,7 @@ urlpatterns = patterns('',
 
     # Your stuff: custom urls go here
     url(r'^', include('petition.urls', namespace='petition')),
-    url('^contact', include('contact.urls', namespace="contact")),
-    url('^', include('django.contrib.flatpages.urls')),
-
+    url(r'^contact', include('contact.urls', namespace="contact")),
+    url(r'^', include('django.contrib.flatpages.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
