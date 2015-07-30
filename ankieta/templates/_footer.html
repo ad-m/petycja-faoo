@@ -1,7 +1,10 @@
+{% load tinycontent_tags %}
 <div class="footer ">
     <div class="container">
         <p>
-            © 2015 Fundacja Akademia Organizacji ObywatelskichCreated by Skygroup.pl <a href="">Polityka cookies</a> <a href="">Kontakt</a>
+            {% tinycontent 'footer' %}
+            Lorem ipsum
+            {% endtinycontent %}
         </p>
     </div>
 </div>

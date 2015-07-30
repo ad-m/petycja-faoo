@@ -1,13 +1,14 @@
 {% extends 'contact/base.html' %}
-{% load crispy_forms_tags %}
+{% load crispy_forms_tags tinycontent_tags %}
 
 {% block content %}
 <div class="row">
     <div class="col-sm-12 col-md-6">
         <div class="widget">
-            {% if config.CONTACT_BLOCK_1 %}
-            {{ config.CONTACT_BLOCK | safe}}
-            {% endif %}
+            {% tinycontent 'contact:text' %}
+            <h1 clas="widget-title">O nas</h1>
+            Jesteśmy OK.
+            {% endtinycontent %}
         </div>
     </div>
     <div class="col-sm-12 col-md-6">

@@ -47,6 +47,8 @@ class Common(Configuration):
         # 'allauth',  # registration
         # 'allauth.account',  # registration
         # 'allauth.socialaccount',  # registration
+        'tinymce',
+        'flatpages_tinymce',
         'tinycontent'
     )
 
@@ -298,38 +300,16 @@ class Common(Configuration):
             ("Wyrażam zgodę na przesyłanie informacji o działalności "
                 "programowej Sieci Obywatelskiej Watchdog Polska",
                 "Text of newsletter confirmation"),
-        "SUCCESS_CONTACT":
-            ("<p>Dziękujemy za wiadomość. Postaramy się udzielić "
-                "odpowiedzi tak szybko jak to możliwe.</p>",
-                "Text of success text in contact form"),
-        "PAGE_NAME":
-            ("Adam Bodnar Rzecznikiem Praw Obywatelskich!",
-                "ASCII name of page"),
-        'FORM_BLOCK_1':
-            ("<h2>Lorem ipsum.</h2><p>Lorem ipsum dolor sit amet, "
-                "consectetur adipisicing.</p>",
-                "HTML code of first block on form page"),
-        'FORM_BLOCK_2':
-            ("<h2>Lorem ipsum.</h2><p>Lorem ipsum dolor sit amet, "
-                "consectetur adipisicing.</p>",
-                "HTML code of second block on form page"),
         'NEWSLETTER_DEFAULT': (True, "Default checked or not newsletter aggrement"),
-        'LETTER_TEXT':
-            ("<h2>Podpisz</h2><p><b>To:</b>Lorem</p><p>ipsum</p>",
-             "HTML code of letter with recipient"),
-        'LETTER_THANK_YOU': ("<p>Lorem ipsum</p>", "HTML code of thank you text"),
-        'LIST_BLOCK':
-            ("<h2>Mapa głosujących</h2><div id=\"map\"></div>",
-                "HTML code of block on list page. Use "
-                "<div id=\"map\"></div> if you want to display map"),
-        'MEDIA_TEXT_1': ("<h2>Lorem</h2><p>ipsum</p>", "HTML code of first media text"),
-        'MEDIA_TEXT_2': ("<h2>Lorem</h2><p>ipsum</p>", "HTML code of second media text"),
-        'MEDIA_TEXT_3': ("<h2>Lorem</h2><p>ipsum</p>", "HTML code of third media text"),
-        'CONTACT_BLOCK_1': ("<h2>Lorem</h2><p>ipsum</p>", "HTML code of first media block"),
-        'CONTACT_BLOCK_2': ("<h2>Lorem</h2><p>ipsum</p>", "HTML code of second media block"),
-        'GITHUB_URL': ("http://google.com", "URL of Github repo with app"),
+        'SITENAME': ("Lorem ipsum", "Sitename"),
+
         'META_DESCRIPTION': ("Lorem ipsum", "ASCII Meta and Facebook description"),
+        'META_IMAGE': ("", "Path to image for Facebook"),
     }
     CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
     CONSTANCE_DATABASE_CACHE_BACKEND = 'default'
     PETITION_PETITION_MODEL = 'petition_custom.Petition'
+
+    TINYMCE_DEFAULT_CONFIG = {
+        'theme': "advanced",
+    }

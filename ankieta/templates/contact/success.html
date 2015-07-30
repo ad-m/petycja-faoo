@@ -2,8 +2,8 @@
 
 {% block form %}
 <div class="row">
-	<div class="col-sm-12 col-md-6">
-		{{config.SUCCESS_CONTACT | safe}}
-	</div>
+    <div class="col-sm-12 col-md-6">
+        {% tinycontent 'contact:success' %}
+    </div>
 </div>
 {% endblock %}

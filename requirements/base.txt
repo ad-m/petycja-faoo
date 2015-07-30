@@ -41,3 +41,5 @@ https://github.com/watchdogpolska/django-one-petition/archive/v0.6.zip
 https://github.com/watchdogpolska/django-multi-contact/archive/v0.2.zip
 swapper==0.2.2
 django-tinycontent==0.5.0
+https://github.com/sp1ky/django-flatpages-tinymce/archive/3808a58e8f67491a4e7ed72bceca3f6d760a8c98.zip
+django-tinymce==1.5.3
