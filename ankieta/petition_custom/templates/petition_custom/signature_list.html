@@ -19,7 +19,7 @@
                     <tr>
                         <th>#</th>
                         <th>Imię i nazwisko</th>
-                        <th>Miejscowość{% include 'petition/_links_sort.html' with column='city'%}</th>
+                        <th>Organizacja</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +27,7 @@
                     <tr>
                         <th scope="row">{{ object.pk }}</th>
                         <td>{{ object.name }}</td>
-                        <td>{{ object.city }}</td>
+                        <td>{{ object.organization }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
