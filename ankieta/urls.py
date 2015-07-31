@@ -11,10 +11,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^media/$',
-        TemplateView.as_view(template_name='pages/media.html'),
-        name="media"),
-
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
