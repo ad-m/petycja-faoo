@@ -309,8 +309,9 @@ class Common(Configuration):
     CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
     CONSTANCE_DATABASE_CACHE_BACKEND = 'default'
     PETITION_PETITION_MODEL = 'petition_custom.Petition'
+    PETITION_SIGNATURE_FORM = 'petition_custom.forms.CustomSignatureForm'
+    PETITION_SIGNATURE_MODEL = 'petition_custom.Signature'
 
     TINYMCE_DEFAULT_CONFIG = {
         'theme': "advanced",
     }
-    PETITION_SIGNATURE_FORM = 'petition_custom.forms.CustomSignatureForm'
